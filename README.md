@@ -24,7 +24,7 @@ Claude: Saved "10-Minute Green Dahl" to iCloud / Recipes, ingredients as a check
 ## Install
 
 ```bash
-git clone https://github.com/<your-username>/recipe-to-notes.git
+git clone https://github.com/EnergySteve/recipe-to-notes.git
 mkdir -p ~/.claude/skills
 cp -R recipe-to-notes/skill/recipe-to-notes ~/.claude/skills/
 ```

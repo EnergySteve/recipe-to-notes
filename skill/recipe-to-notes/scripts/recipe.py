@@ -224,6 +224,9 @@ on run argv
   tell application "System Events"
     tell process "Notes"
       set frontmost to true
+      -- show note leaves the keyboard on the notes list; put it in the note body
+      set value of attribute "AXFocused" of text area 1 of scroll area 3 of splitter group 1 of front window to true
+      delay 0.3
       key code 126 using command down -- cmd-up: top of note
       delay 0.2
       repeat leadCount times
@@ -257,6 +260,9 @@ def cmd_save(path):
     if checklist:
         try:
             osa(CHECKLIST, note_id, str(lead), str(len(r["ingredients"])))
+            # A checklist reads back as a <ul>; plain lines mean the menu click missed.
+            if "<ul>" not in osa('on run argv\ntell application "Notes" to get body of note id (item 1 of argv)\nend run', note_id):
+                raise RuntimeError("Format > Checklist did not apply")
             status = "checklist"
         except RuntimeError as e:
             # Fall back to bullets so the note still reads well on the phone.

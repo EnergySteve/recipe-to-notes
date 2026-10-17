@@ -234,7 +234,7 @@ on run argv
         key code 125 using {option down, shift down} -- extend to end of next paragraph
       end repeat
       delay 0.2
-      keystroke "l" using {command down, shift down} -- Format > Checklist
+      click menu item "Checklist" of menu 1 of menu bar item "Format" of menu bar 1
       delay 0.3
       key code 126 using command down
     end tell

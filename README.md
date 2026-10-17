@@ -21,7 +21,15 @@ Claude: Saved "10-Minute Green Dahl" to iCloud / Recipes, ingredients as a check
 - [yt-dlp](https://github.com/yt-dlp/yt-dlp) for video links: `brew install yt-dlp`
 - Optional: [whisper](https://github.com/openai/whisper) for videos where the recipe is only spoken, not written in the caption
 
-## Install
+## Easiest install
+
+Open Claude Code on your Mac (the Code tab in the Claude app) and paste:
+
+```
+Make me a Recipe Genius! Set it up from https://github.com/EnergySteve/recipe-to-notes (follow SETUP.md)
+```
+
+## Install by hand
 
 ```bash
 git clone https://github.com/EnergySteve/recipe-to-notes.git
